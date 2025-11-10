@@ -153,7 +153,7 @@ flowchart LR
   %% -------------- EDGES ------------------
   A --> B --> C --> D
   D -->|Complete| E --> G
-  D -->|Delete|   F --> H
+  D -->|Delete| F --> H
 
   %% -------------- STYLES -----------------
   class A input
