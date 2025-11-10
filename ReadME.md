@@ -25,8 +25,8 @@ A focused window for the day's work keeps students and solo operators on track, 
 
 ## 📚 Documentation
 
-- **For non-technical users:** See [summary_report.md](summary_report.md) for a plain-language overview
-- **For developers:** See [main.py](main.py) for the source code
+- **Source code:** [main.py](main.py)
+- **Learning notes:** This README covers the key Flet concepts explored in this project
 
 ## 🛠️ Tech Stack
 
@@ -70,8 +70,8 @@ Traditional Python desktop apps required learning Tkinter (dated), PyQt (complex
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/todo-list-manager.git
-   cd todo-list-manager
+   git clone https://github.com/Rashad1019/TO_DO_LIST.git
+   cd TO_DO_LIST
    ```
 
 2. **Create and activate a virtual environment**
@@ -110,6 +110,58 @@ Traditional Python desktop apps required learning Tkinter (dated), PyQt (complex
 2. **Add a task** – Type your task in the text field and click "Add Task"
 3. **Complete a task** – Check the checkbox next to the task
 4. **Delete a task** – Click the trash icon to remove it
+
+## 📸 Screenshots
+
+### Main Interface
+![Todo List Manager Interface](main-interface.png)
+*Clean, dark-themed interface with sample tasks*
+
+### Task Workflow
+![Task Completion Flow](task-flow.png)
+*The full workflow: tasks ready to be managed*
+
+### Workflow Diagram
+
+```mermaid
+flowchart LR
+    %% NODES
+    A([Enter Task Text])
+    B([Click Add Task])
+    C[[Task appears in list]]
+    D{Next Action?}
+    E([Check to Complete])
+    F([Click to Delete])
+    G[[Task marked complete]]
+    H[[Task deleted]]
+    
+    %% FLOW
+    A --> B --> C --> D
+    D -->|Complete| E --> G
+    D -->|Delete| F --> H
+    
+    %% STYLES
+    classDef input fill:#c8e6c9,stroke:#1b5e20,stroke-width:1px,color:#1b5e20
+    classDef action fill:#bbdefb,stroke:#0d47a1,stroke-width:1px,color:#0d47a1
+    classDef state fill:#ffe082,stroke:#e65100,stroke-width:1px,color:#e65100
+    classDef end fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#1b5e20
+    classDef danger fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#b71c1c
+    
+    class A input
+    class B action
+    class C state
+    class D state
+    class E action
+    class F action
+    class G end
+    class H danger
+```
+
+### Before and After Completion
+
+| Before: Task unchecked | After: Task marked complete |
+|:----------------------:|:---------------------------:|
+| ![Before](before-complete.png) | ![After](after-complete.png) |
 
 ## 📊 Success Metrics
 
@@ -161,7 +213,7 @@ This is a learning project, and contributions are welcome! Whether you're also e
 - Share your own Flet learning experiences
 - Suggest better ways to structure Flet apps
 
-Check the [issues page](https://github.com/yourusername/todo-list-manager/issues) to see what's being worked on.
+Check the [issues page](https://github.com/Rashad1019/TO_DO_LIST/issues) to see what's being worked on.
 
 ## 📝 License
 
@@ -169,7 +221,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
-**Rasha** – [Add your email or portfolio link]
+**Rasha** – [Rashad12x@outlook.com](mailto:Rashad12x@outlook.com)
 
 *Building this to learn Flet and share the journey. If you're exploring Flet too, let's connect!*
 
