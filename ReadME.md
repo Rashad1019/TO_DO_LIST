@@ -111,57 +111,62 @@ Traditional Python desktop apps required learning Tkinter (dated), PyQt (complex
 3. **Complete a task** – Check the checkbox next to the task
 4. **Delete a task** – Click the trash icon to remove it
 
+---
+
 ## 📸 Screenshots
 
+> Each image is on its own line to avoid crowding. Adjust widths as you like.
+
 ### Main Interface
-![Todo List Manager Interface](main-interface.png)
-*Clean, dark-themed interface with sample tasks*
+<img alt="Todo List Manager Interface" src="main-interface.png" width="900">
 
 ### Task Workflow
-![Task Completion Flow](task-flow.png)
-*The full workflow: tasks ready to be managed*
+<img alt="Task Completion Flow" src="task-flow.png" width="900">
 
-### Workflow Diagram
+### Before and After Completion
+<img alt="Before completion" src="before-complete.png" width="900">
+<img alt="After completion" src="after-complete.png" width="900">
+
+---
+
+## 🗺️ Workflow Diagram
 
 ```mermaid
 flowchart LR
-    %% NODES
-    A([Enter Task Text])
-    B([Click Add Task])
-    C[[Task appears in list]]
-    D{Next Action?}
-    E([Check to Complete])
-    F([Click to Delete])
-    G[[Task marked complete]]
-    H[[Task deleted]]
-    
-    %% FLOW
-    A --> B --> C --> D
-    D -->|Complete| E --> G
-    D -->|Delete| F --> H
-    
-    %% STYLES
-    classDef input fill:#c8e6c9,stroke:#1b5e20,stroke-width:1px,color:#1b5e20
-    classDef action fill:#bbdefb,stroke:#0d47a1,stroke-width:1px,color:#0d47a1
-    classDef state fill:#ffe082,stroke:#e65100,stroke-width:1px,color:#e65100
-    classDef end fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#1b5e20
-    classDef danger fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#b71c1c
-    
-    class A input
-    class B action
-    class C state
-    class D state
-    class E action
-    class F action
-    class G end
-    class H danger
+  %% ---------- CLASS DEFINITIONS ----------
+  classDef input fill:#c8e6c9,stroke:#1b5e20,stroke-width:1px,color:#1b5e20
+  classDef action fill:#bbdefb,stroke:#0d47a1,stroke-width:1px,color:#0d47a1
+  classDef state  fill:#ffe082,stroke:#e65100,stroke-width:1px,color:#e65100
+  classDef success fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#1b5e20
+  classDef danger fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#b71c1c
+
+  %% -------------- NODES ------------------
+  A([Enter Task Text])
+  B([Click Add Task])
+  C[[Task appears in list]]
+  D{Next Action?}
+  E([Check to Complete])
+  F([Click to Delete])
+  G[[Task marked complete]]
+  H[[Task deleted]]
+
+  %% -------------- EDGES ------------------
+  A --> B --> C --> D
+  D -->|Complete| E --> G
+  D -->|Delete|   F --> H
+
+  %% -------------- STYLES -----------------
+  class A input
+  class B action
+  class C state
+  class D state
+  class E action
+  class F action
+  class G success
+  class H danger
 ```
 
-### Before and After Completion
-
-| Before: Task unchecked | After: Task marked complete |
-|:----------------------:|:---------------------------:|
-| ![Before](before-complete.png) | ![After](after-complete.png) |
+---
 
 ## 📊 Success Metrics
 
